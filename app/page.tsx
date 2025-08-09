@@ -1,7 +1,7 @@
 import Hero from "@/components/hero";
 import Navbar from "@/components/navbar";
 import Products from "@/components/platforms";
-// import { VirtualTerminal } from "@/components/VirtualTerminal";
+import Footer from "@/components/footer";
 
 export default function Home() {
   return (
@@ -9,8 +9,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Products />
-      {/* <VirtualTerminal /> */}
-      
+      <Footer />
     </div>
   );
 }
