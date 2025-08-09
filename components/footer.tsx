@@ -1,3 +1,5 @@
+"use client";
+
 export default function Footer() {
     return <div className="bg-[#f45455] mt-20 border-t-4 border-b-0 rounded-5xl rounded-b-none rounded-tl-3xl rounded-tr-3xl">
         <div className="p-5 flex justify-start items-start gap-10 flex-wrap pl-20 pr-30 pt-10">
@@ -7,14 +9,14 @@ export default function Footer() {
                 </h1>
                 <div className="flex gap-10 mt-3 mr-8">
                     <ul className="cursor-pointer text-3xl" style={{ fontFamily: '"Bahnschrift Condensed", "Bahnschrift", "Agency FB", Arial, sans-serif' }}>
-                        <li>Home</li>
-                        <li>About</li>
-                        <li>Feedback</li>
-                        <li>Help Center</li>
+                        <li onClick={() => window.location.hash = "#"}>Home</li>
+                        <li onClick={() => window.location.hash = "#about"}>About</li>
+                        <li onClick={() => window.location.hash = "#feedback"}>Feedback</li>
+                        <li onClick={() => window.location.hash = "#help"}>Help Center</li>
                     </ul>
                     <ul className="cursor-pointer text-3xl ml-[-10px]" style={{ fontFamily: '"Bahnschrift Condensed", "Bahnschrift", "Agency FB", Arial, sans-serif' }}>
-                        <li>Contribute</li>
-                        <li>Sponsor</li>
+                        <li onClick={() => window.location.hash = "#contribute"}>Contribute</li>
+                        <li onClick={() => window.location.hash = "#sponsor"}>Sponsor</li>
                     </ul>
                 </div>
             </div>
@@ -23,9 +25,9 @@ export default function Footer() {
                     Socials
                 </h1>
                 <ul className="cursor-pointer text-3xl mt-3" style={{ fontFamily: '"Bahnschrift Condensed", "Bahnschrift", "Agency FB", Arial, sans-serif' }}>
-                    <li>GitHub</li>
-                    <li>Twitter(X)</li>
-                    <li>LinkedIn</li>
+                    <li onClick={() => window.location.href = "https://github.com/pushkarsinghh/"}>GitHub</li>
+                    <li onClick={() => window.location.href = "https://twitter.com/"}>Twitter(X)</li>
+                    <li onClick={() => window.location.href = "https://linkedin.com/in/pushkarsinghh"}>LinkedIn</li>
                 </ul>
             </div>
             <div>

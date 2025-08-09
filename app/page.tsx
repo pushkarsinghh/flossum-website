@@ -4,6 +4,7 @@ import Products from "@/components/platforms";
 import Footer from "@/components/footer";
 import Tutorial from "@/components/tutorial";
 import Support from "@/components/support";
+import Contribute from "@/components/contribute";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Hero />
       <Products />
       <Tutorial />
+      <Contribute />
       <Support />
       <Footer />
     </div>
