@@ -1,6 +1,13 @@
+import Head from "next/head"
+
 export default function Hero() {
+
+
     return (
         <div>
+            <Head>
+                <meta property="og:image" content="./public/FlossumBanner.png" />
+            </Head>
             <div className="flex flex-col justify-center items-center h-auto mx-[5vw] mb-0 mt-[2vw] pt-[6vw] pb-[6vw] text-[white] bg-[#f45455] border-0 rounded-[2vw] px-[3vw]">
                 <h1 className="text-[9vw] font-extrabold font-stretch-semi-condensed mb-[-3vw]" style={{ fontFamily: '"Agency FB", Arial, sans-serif' }}>
                     TextFX for Terminals ✨
