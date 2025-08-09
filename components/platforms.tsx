@@ -1,3 +1,4 @@
+"use client"
 import { Ubuntu } from 'next/font/google';
 import Image from 'next/image';
 
@@ -24,7 +25,10 @@ export default function Products() {
                     </div>
                 </div>
                 <div className="flex flex-col flex-start mt-4 mb-4 items-start">
-                    <div className="bg-[#1e1e2e] rounded-md p-3 sm:p-4 mt-4 text-lg sm:text-xl md:text-2xl w-full sm:w-[60vw] md:w-[40vw] flex justify-between items-center">
+                    <div className="bg-[#1e1e2e] rounded-md p-3 sm:p-4 mt-4 text-lg sm:text-xl md:text-2xl w-full sm:w-[60vw] md:w-[40vw] flex justify-between items-center cursor-pointer"
+                        onClick={() => navigator.clipboard.writeText('npm install flossum')}
+                        title="Copy npm install command to clipboard"
+                    >
                         <p className="font-mono">npm install flossum</p>
                         <div className="relative ml-2" style={{ width: 70, height: 70 }}>
                             <Image
@@ -37,7 +41,11 @@ export default function Products() {
                             />
                         </div>
                     </div>
-                    <div className="bg-[#1e1e2e] rounded-md p-3 sm:p-4 mt-4 text-lg sm:text-xl md:text-2xl w-full sm:w-[60vw] md:w-[40vw] flex justify-between items-center">
+                    <div
+                        className="bg-[#1e1e2e] rounded-md p-3 sm:p-4 mt-4 text-lg sm:text-xl md:text-2xl w-full sm:w-[60vw] md:w-[40vw] flex justify-between items-center cursor-pointer"
+                        onClick={() => navigator.clipboard.writeText('yarn add flossum')}
+                        title="Copy yarn add command to clipboard"
+                    >
                         <p className="font-mono">yarn add flossum</p>
                         <div className="relative ml-2" style={{ width: 70, height: 70 }}>
                             <Image
@@ -50,7 +58,10 @@ export default function Products() {
                             />
                         </div>
                     </div>
-                    <div className="bg-[#1e1e2e] rounded-md p-3 sm:p-4 mt-4 text-lg sm:text-xl md:text-2xl w-full sm:w-[60vw] md:w-[40vw] flex justify-between items-center">
+                    <div className="bg-[#1e1e2e] rounded-md p-3 sm:p-4 mt-4 text-lg sm:text-xl md:text-2xl w-full sm:w-[60vw] md:w-[40vw] flex justify-between items-center cursor-pointer"
+                        onClick={() => navigator.clipboard.writeText('pnpm add flossum')}
+                        title="Copy pnpm add command to clipboard"
+                    >
                         <p className="font-mono">pnpm add flossum</p>
                         <div className="relative ml-2" style={{ width: 60, height: 60 }}>
                             <Image

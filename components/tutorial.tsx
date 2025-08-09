@@ -125,7 +125,7 @@ export default function Tutorial() {
                     </li>
                 </ul>
             </section>
-            <hr className='border-[#2f2f4a] border-2 mt-18 mb-18'/>
+            <hr className='border-[#2f2f4a] border-2 mt-18 mb-0'/>
         </div>
     )
 }

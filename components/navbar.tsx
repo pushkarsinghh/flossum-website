@@ -20,8 +20,13 @@ export default function Navbar() {
                                 tutorialSection.scrollIntoView({ behavior: "smooth" });
                             }
                         }}>LEARN</li>
-      <Link href="#" className="hover:underline">ABOUT</Link>
       <Link href="#" className="hover:underline">CONTRIBUTE</Link>
+      <li className="list-none hover:underline cursor-pointer" onClick={() => {
+                            const sponsorSection = document.getElementById("sponsor");
+                            if (sponsorSection) {
+                                sponsorSection.scrollIntoView({ behavior: "smooth" });
+                            }
+                        }}>SPONSOR</li>
       </div>
       <button className="md:hidden" onClick={() => setMenuOpen(!menuOpen)}>
       {menuOpen ? <X size={28} /> : <Menu size={28} />}
