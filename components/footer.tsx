@@ -9,7 +9,7 @@ export default function Footer() {
                 </h1>
                 <div className="flex gap-10 mt-3 mr-8">
                     <ul className="cursor-pointer text-3xl" style={{ fontFamily: '"Bahnschrift Condensed", "Bahnschrift", "Agency FB", Arial, sans-serif' }}>
-                        <li onClick={() => window.location.hash = "#"}>Home</li>
+                        <li onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>Home</li>
                         <li onClick={() => window.location.hash = "#about"}>About</li>
                         <li onClick={() => window.location.hash = "#feedback"}>Feedback</li>
                         <li onClick={() => window.location.hash = "#help"}>Help Center</li>

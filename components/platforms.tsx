@@ -76,7 +76,7 @@ export default function Products() {
                     </div>
                 </div>
             </div>
-            <hr className='border-[#2f2f4a] border-2 mt-18'/>
+            <hr className='border-[#2f2f4a] border-2 mt-18 mr-[3vw]'/>
         </div>
     );
 }

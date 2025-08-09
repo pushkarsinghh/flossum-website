@@ -27,9 +27,9 @@ export default function Tutorial() {
                     <div className='bg-[#1e1e2f] p-4 rounded-lg mt-2 h-[75%]'>
                         <pre>
                             <code>
-                                import &#123; Flossum &#125; from &apos;flossum&apos;;<br />
+                                import &#123; flossum &#125; from &apos;flossum&apos;;<br />
                                 <br />
-                                await Flossum.effectName(&apos;Hello World!&apos;);
+                                await flossum.effectName(&apos;Hello World!&apos;);
                             </code>
                         </pre>
                     </div>
