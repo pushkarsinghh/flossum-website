@@ -5,7 +5,7 @@ const ubuntu = Ubuntu({ weight: ['300', '400', '700', '700'], subsets: ['latin']
 
 export default function Products() {
     return (
-        <div className="mt-8 ml-[3vw] p-4 sm:p-8 md:p-10 pb-0">
+        <div className="mt-8 ml-[3vw] p-4 sm:p-8 md:p-10 pb-0" id='platforms'>
             <div>
                 <div className="flex justify-between items-end">
                     <div>
@@ -65,6 +65,7 @@ export default function Products() {
                     </div>
                 </div>
             </div>
+            <hr className='border-[#2f2f4a] border-2 mt-18'/>
         </div>
     );
 }

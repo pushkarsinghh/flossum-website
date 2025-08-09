@@ -5,7 +5,6 @@ const ubuntu = Ubuntu({ weight: ['300', '400', '700', '700'], subsets: ['latin']
 export default function Tutorial() {
     return (
         <div className="mt-0 ml-[3vw] mr-[3vw] p-4 sm:p-8 md:p-10 pb-0" id='tutorial'>
-            <hr className='border-[#2f2f4a] border-2 mb-18'/>
             <div className="flex justify-between items-end">
                 <div>
                     <h1

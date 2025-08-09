@@ -1,8 +1,7 @@
+"use client"
 import Head from "next/head"
 
 export default function Hero() {
-
-
     return (
         <div>
             <Head>
@@ -16,7 +15,15 @@ export default function Hero() {
                     className="flex gap-[2vw] *:hover:scale-103 transition-transform duration-10000 mt-[5vw] font-[Lilita One]"
                     style={{ fontFamily: '"Bahnschrift Condensed", "Bahnschrift", "Agency FB", Arial, sans-serif' }}
                 >
-                    <div className="text-[#F45455] bg-gradient-to-b from-[#FFEAB5] to-[#ffd47b] border-[0.3vw] py-[1vw] px-[3vw] text-[5vw] flex items-center justify-center font-extrabold rounded-[2vw] text-center border-[#F45455] hover:cursor-pointer">
+                    <div
+                        className="text-[#F45455] bg-gradient-to-b from-[#FFEAB5] to-[#ffd47b] border-[0.3vw] py-[1vw] px-[3vw] text-[5vw] flex items-center justify-center font-extrabold rounded-[2vw] text-center border-[#F45455] hover:cursor-pointer"
+                        onClick={() => {
+                            const platformsSection = document.getElementById("platforms");
+                            if (platformsSection) {
+                                platformsSection.scrollIntoView({ behavior: "smooth" });
+                            }
+                        }}
+                    >
                         GET STARTED!
                     </div>
                 </div>

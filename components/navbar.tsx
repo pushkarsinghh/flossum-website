@@ -14,7 +14,12 @@ export default function Navbar() {
       </div>
       <div className="hidden md:flex gap-6">
       <Link href="#" className="hover:underline">HOME</Link>
-      <a href="#tutorial" className="hover:underline">LEARN</a>
+      <li className="list-none hover:underline cursor-pointer" onClick={() => {
+                            const tutorialSection = document.getElementById("tutorial");
+                            if (tutorialSection) {
+                                tutorialSection.scrollIntoView({ behavior: "smooth" });
+                            }
+                        }}>LEARN</li>
       <Link href="#" className="hover:underline">ABOUT</Link>
       <Link href="#" className="hover:underline">CONTRIBUTE</Link>
       </div>
