@@ -6,7 +6,7 @@ Explore demos, learn how to use effects like `wave`, `rainbow`, and `glitch`, an
 
 ## 🌐 Visit
 
-Explore the live playground and docs at [`flossum.wuave.com`](http://flossum.wuave.com/)
+Explore the live playground and docs at [`flossum.vercel.app`](https://flossum.vercel.app/)
 
 ## 🛠️ Tech Stack
 
