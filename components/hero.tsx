@@ -1,14 +1,19 @@
 export default function Hero() {
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen mt-[-12rem] w-screen">
-            <section className="bg-[#FF5C5C] text-white py-20 px-4 md:px-16 text-center rounded-3xl m-4 shadow-xl">
-                <h1 className="text-4xl md:text-6xl font-extrabold mb-8">
-                    TextFX for Terminals<span className="inline-block drop-shadow-[0_0_3px_black]">✨</span>
+        <div>
+            <div className="flex flex-col justify-center items-center h-auto mx-[5vw] mb-0 mt-[2vw] pt-[6vw] pb-[6vw] text-[white] bg-[#f45455] border-0 rounded-[2vw] px-[3vw]">
+                <h1 className="text-[9vw] font-extrabold font-stretch-semi-condensed mb-[-3vw]" style={{ fontFamily: '"Agency FB", Arial, sans-serif' }}>
+                    TextFX for Terminals ✨
                 </h1>
-                <button className="bg-[#FFD966] text-[#FF5C5C] font-bold text-2xl px-6 py-3 rounded-xl shadow-md hover:scale-105 transition">
-                    GET STARTED!
-                </button>
-            </section>
+                <div
+                    className="flex gap-[2vw] *:hover:scale-103 transition-transform duration-10000 mt-[5vw] font-[Lilita One]"
+                    style={{ fontFamily: '"Bahnschrift Condensed", "Bahnschrift", "Agency FB", Arial, sans-serif' }}
+                >
+                    <div className="text-[#F45455] bg-gradient-to-b from-[#FFEAB5] to-[#ffd47b] border-[0.3vw] py-[1vw] px-[3vw] text-[5vw] flex items-center justify-center font-extrabold rounded-[2vw] text-center border-[#F45455] hover:cursor-pointer">
+                        GET STARTED!
+                    </div>
+                </div>
+            </div>
         </div>
-    );
+    )
 }
