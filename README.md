@@ -21,4 +21,4 @@ This website is open source. Found a bug or want to improve the UX? Head to the 
 
 ---
 
-© 2025 Flossum. MIT Licensed • Crafted with 🖤 by Pushkar Singh
+© 2025 Flossum. MIT Licensed • Crafted with ❤️ by Pushkar Singh
