@@ -8,13 +8,37 @@ const ubuntu = Ubuntu({
   subsets: ["latin"],
 });
 
+// 🧑‍💻 Add contributors here:
+const contributors = [
+  {
+    name: "Adarsh Gupta",
+    github: "https://github.com/adarshdotdev",
+    avatar: "/contributors/adarshdotdev.png",
+  },
+  {
+    name: "coftad",
+    github: "https://github.com/coftad",
+    avatar: "/contributors/coftad.png",
+  },
+  {
+    name: "Satya Prakash",
+    github: "https://github.com/SatyaIsCoding",
+    avatar: "/contributors/SatyaIsCoding.png",
+  },
+  {
+    name: "Lazy4js2qy",
+    github: "https://github.com/Lazy4js2qy",
+    avatar: "/contributors/lazy.png",
+  },
+];
+
 export default function Support() {
   return (
     <section
       id="sponsor"
       className="mt-0 ml-[3vw] p-4 sm:p-8 md:p-10 pb-0 flex flex-col"
     >
-      {/* Title Section */}
+      {/* 🏷️ Title Section */}
       <div className="flex flex-col gap-2">
         <h1
           className="text-3xl sm:text-4xl md:text-5xl font-bold"
@@ -31,7 +55,7 @@ export default function Support() {
         </p>
       </div>
 
-      {/* Support Cards */}
+      {/* 💖 Support Cards */}
       <div className="flex flex-wrap gap-6 mt-8 mb-12 items-center">
         {/* GitHub Star */}
         <div
@@ -87,6 +111,41 @@ export default function Support() {
             width={220}
             className="rounded-xl shadow-md"
           />
+        </div>
+      </div>
+
+      {/* 🙏 Contributors Section */}
+      <div>
+        <h2
+          className="text-2xl sm:text-3xl font-bold mb-4"
+          style={{ fontFamily: ubuntu.style.fontFamily }}
+        >
+          Thanks to our Contributors 💕
+        </h2>
+        <div className="flex flex-wrap gap-6 items-center">
+          {contributors.map((contributor, index) => (
+            <div
+              key={index}
+              onClick={() =>
+                window.open(contributor.github, "_blank", "noopener,noreferrer")
+              }
+              className="flex flex-col items-center cursor-pointer hover:scale-105 transition-transform duration-200"
+            >
+              <Image
+                src={contributor.avatar}
+                alt={contributor.name}
+                width={80}
+                height={80}
+                className="rounded-full shadow-md"
+              />
+              <p
+                className="mt-2 text-md text-gray-700 dark:text-gray-300 text-center"
+                style={{ fontFamily: ubuntu.style.fontFamily }}
+              >
+                {contributor.name}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
