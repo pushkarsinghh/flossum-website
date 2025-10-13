@@ -11,7 +11,7 @@ export default function Contribute() {
                 <div className="flex justify-between items-end mb-10">
                     <div>
                         <h1
-                            className="text-3xl sm:text-4xl md:text-5xl"
+                            className="text-3xl font-bold sm:text-4xl md:text-5xl"
                             style={{ fontFamily: ubuntu.style.fontFamily }}
                         >
                             Contributions are Welcome!

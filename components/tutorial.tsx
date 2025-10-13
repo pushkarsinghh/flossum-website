@@ -1,131 +1,118 @@
 import { Ubuntu } from 'next/font/google';
 
-const ubuntu = Ubuntu({ weight: ['300', '400', '700', '700'], subsets: ['latin'] });
+const ubuntu = Ubuntu({
+    weight: ['300', '400', '700'],
+    subsets: ['latin'],
+});
 
 export default function Tutorial() {
     return (
-        <div className="mt-0 ml-[3vw] mr-[3vw] p-4 sm:p-8 md:p-10 pb-0" id='tutorial'>
-            <div className="flex justify-between items-end">
+        <div
+            className="mt-0 mx-[3vw] p-4 sm:p-6 md:p-10 pb-0"
+            id="tutorial"
+        >
+            {/* Header Section */}
+            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-2">
                 <div>
                     <h1
-                        className="text-3xl sm:text-4xl md:text-5xl"
+                        className="text-3xl sm:text-4xl font-bold md:text-5xl leading-tight"
                         style={{ fontFamily: ubuntu.style.fontFamily }}
                     >
                         How to Use?
                     </h1>
                     <p
-                        className="ml-0 m-1 text-lg sm:text-xl md:text-2xl"
+                        className="mt-2 text-lg sm:text-xl md:text-2xl text-gray-100"
                         style={{ fontFamily: ubuntu.style.fontFamily }}
                     >
                         Follow these steps to get started with Flossum:
                     </p>
                 </div>
             </div>
-            <div className='flex flex-row gap-4 mt-6 sm: flex-wrap md:flex-nowrap'>
-                <div className='bg-[#f45455] p-4 rounded-lg mt-4 w-full'>
-                    <p className='text-white text-2xl font-semibold' style={{ fontFamily: '"Bahnschrift Condensed", Bahnschrift, Arial, sans-serif' }}>For JavaScript/TypeScript files:</p>
-                    <div className='bg-[#1e1e2f] p-4 rounded-lg mt-2 h-[75%]'>
-                        <pre>
+
+            {/* Code Examples Section */}
+            <div className="flex flex-col md:flex-row gap-6 mt-6">
+                <div className="bg-[#f45455] p-4 rounded-lg w-full md:w-1/2">
+                    <p
+                        className="text-white text-xl sm:text-2xl font-semibold mb-2"
+                        style={{
+                            fontFamily:
+                                '"Bahnschrift Condensed", Bahnschrift, Arial, sans-serif',
+                        }}
+                    >
+                        For JavaScript/TypeScript files:
+                    </p>
+                    <div className="bg-[#1e1e2f] p-4 rounded-lg overflow-x-auto">
+                        <pre className="text-sm sm:text-base text-gray-200">
                             <code>
-                                import &#123; flossum &#125; from &apos;flossum&apos;;<br />
-                                <br />
+                                import &#123; flossum &#125; from &apos;flossum&apos;;{'\n'}
+                                {'\n'}
                                 await flossum.effectName(&apos;Hello World!&apos;);
                             </code>
                         </pre>
                     </div>
                 </div>
-                <div className='bg-[#f45455] p-4 rounded-lg mt-4 w-full'>
-                    <p className='text-white text-2xl font-semibold' style={{ fontFamily: '"Bahnschrift Condensed", Bahnschrift, Arial, sans-serif' }}>For direct Terminal usage:</p>
-                    <div className='bg-[#1e1e2f] p-4 rounded-lg mt-2 h-[75%]'>
-                        <pre>
+
+                <div className="bg-[#f45455] p-4 rounded-lg w-full md:w-1/2">
+                    <p
+                        className="text-white text-xl sm:text-2xl font-semibold mb-2"
+                        style={{
+                            fontFamily:
+                                '"Bahnschrift Condensed", Bahnschrift, Arial, sans-serif',
+                        }}
+                    >
+                        For direct Terminal usage:
+                    </p>
+                    <div className="bg-[#1e1e2f] p-4 rounded-lg overflow-x-auto">
+                        <pre className="text-sm sm:text-base text-gray-200">
                             <code>
-                                flossum effectName &quot;Hello World!&quot;;
-                                <br />
-                                <br />
+                                flossum effectName &quot;Hello World!&quot;;{'\n'}
                             </code>
                         </pre>
                     </div>
                 </div>
             </div>
-            <section className="flex flex-col mt-8">
+
+            {/* Available Effects Section */}
+            <section className="flex flex-col mt-10">
                 <h2
-                    className="text-3xl font-semibold mb-2"
+                    className="text-2xl underline sm:text-3xl mb-4"
                     style={{ fontFamily: ubuntu.style.fontFamily }}
                 >
-                    Available Effects
+                    Available Effects:
                 </h2>
+
                 <ul
-                    className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4 ml-2 text-base sm:text-lg"
+                    className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-base sm:text-lg"
                     style={{ fontFamily: ubuntu.style.fontFamily }}
                 >
-                    <li>
-                        <span className="mr-2">⌨️</span>
-                        <b>Typewriter</b> <code className="bg-gray-100 px-1 rounded text-black p-[0.5]">typeOut</code>
-                        <span className="text-gray-500 ml-1"> - Simulates typing text</span>
-                    </li>
-                    <li>
-                        <span className="mr-2">⏪</span>
-                        <b>Reverse Typewriter</b> <code className="bg-gray-100 px-1 rounded text-black p-[0.5]">reverseType</code>
-                        <span className="text-gray-500 ml-1"> - Deletes text like rewinding</span>
-                    </li>
-                    <li>
-                        <span className="mr-2">🌊</span>
-                        <b>Wavy Text</b> <code className="bg-gray-100 px-1 rounded text-black p-[0.5]">wave</code>
-                        <span className="text-gray-500 ml-1"> - Animated wave motion</span>
-                    </li>
-                    <li>
-                        <span className="mr-2">🌈</span>
-                        <b>Color Pulse</b> <code className="bg-gray-100 px-1 rounded text-black p-[0.5]">colorPulse</code>
-                        <span className="text-gray-500 ml-1"> - Pulsing color animation</span>
-                    </li>
-                    <li>
-                        <span className="mr-2">🔁</span>
-                        <b>Spinner</b> <code className="bg-gray-100 px-1 rounded text-black p-[0.5]">spinner</code>
-                        <span className="text-gray-500 ml-1"> - Loading spinner effect</span>
-                    </li>
-                    <li>
-                        <span className="mr-2">📊</span>
-                        <b>Progress Bar</b> <code className="bg-gray-100 px-1 rounded text-black p-[0.5]">progressBar</code>
-                        <span className="text-gray-500 ml-1"> - Animated progress bar</span>
-                    </li>
-                    <li>
-                        <span className="mr-2">🤯</span>
-                        <b>Glitch</b> <code className="bg-gray-100 px-1 rounded text-black p-[0.5]">glitch</code>
-                        <span className="text-gray-500 ml-1"> - Glitchy text distortion</span>
-                    </li>
-                    <li>
-                        <span className="mr-2">🧩</span>
-                        <b>Scramble Decoder</b> <code className="bg-gray-100 px-1 rounded text-black p-[0.5]">scramble</code>
-                        <span className="text-gray-500 ml-1"> - Scrambled-to-clear text</span>
-                    </li>
-                    <li>
-                        <span className="mr-2">🌈</span>
-                        <b>Rainbow Text</b> <code className="bg-gray-100 px-1 rounded text-black p-[0.5]">rainbow</code>
-                        <span className="text-gray-500 ml-1"> - Animated rainbow colors</span>
-                    </li>
-                    <li>
-                        <span className="mr-2">🎞</span>
-                        <b>Frame Player</b> <code className="bg-gray-100 px-1 rounded text-black p-[0.5]">playFrames</code>
-                        <span className="text-gray-500 ml-1"> - ASCII animation frames</span>
-                    </li>
-                    <li>
-                        <span className="mr-2">🅰️</span>
-                        <b>ASCII Art</b> <code className="bg-gray-100 px-1 rounded text-black p-[0.5]">asciiArt</code>
-                        <span className="text-gray-500 ml-1"> - Text as ASCII art</span>
-                    </li>
-                    <li>
-                        <span className="mr-2">⚡</span>
-                        <b>Flash</b> <code className="bg-gray-100 px-1 rounded text-black p-[0.5]">flash</code>
-                        <span className="text-gray-500 ml-1"> - Flashing/blinking text</span>
-                    </li>
-                    <li>
-                        <span className="mr-2">✂️</span>
-                        <b>Type-Delete</b> <code className="bg-gray-100 px-1 rounded text-black p-[0.5]">typeDelete</code>
-                        <span className="text-gray-500 ml-1"> - Type and delete animation</span>
-                    </li>
+                    {[
+                        ['⌨️', 'Typewriter', 'typeOut', 'Simulates typing text'],
+                        ['⏪', 'Reverse Typewriter', 'reverseType', 'Deletes text like rewinding'],
+                        ['🌊', 'Wavy Text', 'wave', 'Animated wave motion'],
+                        ['🌈', 'Color Pulse', 'colorPulse', 'Pulsing color animation'],
+                        ['🔁', 'Spinner', 'spinner', 'Loading spinner effect'],
+                        ['📊', 'Progress Bar', 'progressBar', 'Animated progress bar'],
+                        ['🤯', 'Glitch', 'glitch', 'Glitchy text distortion'],
+                        ['🧩', 'Scramble Decoder', 'scramble', 'Scrambled-to-clear text'],
+                        ['🌈', 'Rainbow Text', 'rainbow', 'Animated rainbow colors'],
+                        ['🎞', 'Frame Player', 'playFrames', 'ASCII animation frames'],
+                        ['🅰️', 'ASCII Art', 'asciiArt', 'Text as ASCII art'],
+                        ['⚡', 'Flash', 'flash', 'Flashing/blinking text'],
+                        ['✂️', 'Type-Delete', 'typeDelete', 'Type and delete animation'],
+                    ].map(([emoji, title, code, desc]) => (
+                        <li key={code} className="flex flex-wrap items-center">
+                            <span className="mr-2">{emoji}</span>
+                            <b>{title}</b>{' '}
+                            <code className="bg-gray-100 px-1 rounded text-black mx-1 text-sm">
+                                {code}
+                            </code>
+                            <span className="text-gray-500 text-sm sm:text-base">{` - ${desc}`}</span>
+                        </li>
+                    ))}
                 </ul>
             </section>
-            <hr className='border-[#2f2f4a] border-2 mt-18 mb-0'/>
+
+            <hr className="border-[#2f2f4a] border-2 mt-12 mb-0" />
         </div>
-    )
+    );
 }
