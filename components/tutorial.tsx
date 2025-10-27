@@ -65,9 +65,30 @@ export default function Tutorial() {
                     <div className="bg-[#1e1e2f] p-4 rounded-lg overflow-x-auto">
                         <pre className="text-sm sm:text-base text-gray-200">
                             <code>
-                                flossum effectName &quot;Hello World!&quot;;{'\n'}
+                                flossum effectName &quot;Hello World!&quot;;{'\n\n\n'}
                             </code>
                         </pre>
+                    </div>
+                </div>
+            </div>
+            
+            <div>
+                <div className="mt-8">
+                    <h3
+                        className="text-xl sm:text-2xl font-semibold mb-2"
+                        style={{ fontFamily: ubuntu.style.fontFamily }}
+                    >
+                        Demo Video:
+                    </h3>
+                    <div className="relative pb-[56.25%] h-0 rounded overflow-hidden shadow-lg">
+                        <iframe
+                            className="absolute top-0 left-0 w-full h-full"
+                            src="https://www.youtube.com/embed/18lzkb331Gk?si=KD4V8ue8MkfpVBXR"
+                            title="Flossum demo"
+                            frameBorder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowFullScreen
+                        />
                     </div>
                 </div>
             </div>
