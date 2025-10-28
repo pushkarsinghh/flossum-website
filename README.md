@@ -11,6 +11,7 @@ Explore the live playground and docs at [`flossum.vercel.app`](https://flossum.v
 ## 🛠️ Tech Stack
 
 Built with:
+
 - NextJS
 - Tailwind CSS
 - TypeScript
