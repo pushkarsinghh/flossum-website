@@ -22,11 +22,36 @@ export default function Support() {
       .catch(() => setStarCount(0));
 
     // Fetch contributors
-    fetch("https://api.github.com/repos/pushkarsinghh/flossum/contributors")
-      .then((res) => res.json())
-      .then((data) => setContributors(data))
-      .catch(() => setContributors([]));
+    const fetchContributors = async () => {
+      try {
+        const [flossumRes, devtoolsRes, websiteRes] = await Promise.all([
+          fetch(
+            "https://api.github.com/repos/pushkarsinghh/flossum/contributors"
+          ),
+          fetch(
+            "https://api.github.com/repos/pushkarsinghh/flossum-devtools/contributors"
+          ),
+          fetch(
+            "https://api.github.com/repos/pushkarsinghh/flossum-website/contributors"
+          ),
+        ]);
+        const flossumData = await flossumRes.json();
+        const devtoolsData = await devtoolsRes.json();
+        const websiteData = await websiteRes.json();
+        const allContributors = new Map();
+        [...flossumData, ...devtoolsData, ...websiteData].forEach((contrib) => {
+          if (contrib.login) {
+            allContributors.set(contrib.login, contrib);
+          }
+        });
+        setContributors(Array.from(allContributors.values()));
+      } catch {
+        setContributors([]);
+      }
+    };
+    fetchContributors();
   }, []);
+
   return (
     <section
       className="mt-0 ml-[3vw] p-4 sm:p-8 md:p-10 pb-0 flex flex-col relative overflow-hidden"
@@ -59,7 +84,7 @@ export default function Support() {
             window.open(
               "https://github.com/pushkarsinghh/flossum",
               "_blank",
-              "noopener,noreferrer",
+              "noopener,noreferrer"
             )
           }
           className="group relative hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer animate-in fade-in slide-in-from-left-8 delay-100"
@@ -105,7 +130,7 @@ export default function Support() {
             window.open(
               "https://github.com/sponsors/pushkarsinghh",
               "_blank",
-              "noopener,noreferrer",
+              "noopener,noreferrer"
             )
           }
           className="group relative hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer animate-in fade-in slide-in-from-left-8 delay-300"
@@ -136,7 +161,7 @@ export default function Support() {
                 window.open(
                   contributor.html_url,
                   "_blank",
-                  "noopener,noreferrer",
+                  "noopener,noreferrer"
                 )
               }
               className="group flex flex-col items-center cursor-pointer animate-in fade-in zoom-in-95 duration-500"
