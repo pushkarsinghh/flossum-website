@@ -25,6 +25,7 @@ export default function Tutorial() {
     ["🅰️", "ASCII Art", "asciiArt", "Text as ASCII art"],
     ["⚡", "Flash", "flash", "Flashing/blinking text"],
     ["✂️", "Type-Delete", "typeDelete", "Type and delete animation"],
+    ["⏳", "Loading Dots", "dots", "Animated loading dots"],
   ];
 
   const jsCode = `import { flossum } from 'flossum';\n\nawait flossum.effectName('Hello World!');`;
